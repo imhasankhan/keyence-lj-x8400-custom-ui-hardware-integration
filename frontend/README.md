@@ -44,13 +44,13 @@ software**, offering:
 ```bash
 npm install
 ```
----
+
 ### 2. Start development server
 
 ```bash
 npm start
 ```
----
+
 
 The application will be available at:
 http://localhost:3000
