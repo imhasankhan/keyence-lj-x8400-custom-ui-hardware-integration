@@ -143,6 +143,13 @@ April 2025 – August 2025
 
 ---
 
+## Documentation
+
+- 📄 Project Report: `docs/report/keyence-ljx8400-custom-ui-project-report.pdf`
+- 📊 Presentation Slides: `docs/presentation/keyence-ljx8400-project-presentation.pdf`
+
+---
+
 ## Team Project
 Developed as a six-member team project  
 Hochschule Darmstadt – Electrical Engineering & Information Technology (M.Sc.)
