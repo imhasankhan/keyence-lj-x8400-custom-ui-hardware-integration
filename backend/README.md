@@ -65,7 +65,6 @@ Edit
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 The server will be available at http://localhost:8000
 
-```markdown
 ---
 
 ## Interactive API documentation
@@ -76,3 +75,27 @@ for exploring and testing all available endpoints.
 ```bash
 http://localhost:8000/docs
 
+---
+
+## Source Code Note
+
+Vendor SDK binaries (DLL/.so) and proprietary libraries are intentionally
+excluded due to licensing restrictions. The backend structure demonstrates
+how such SDKs are integrated through a Python abstraction layer without
+exposing vendor-specific code.
+
+For portfolio purposes, simulated profile data may be returned when the
+physical sensor is not connected.
+
+---
+
+## Intended Use
+- Industrial sensor visualization systems
+- Real-time measurement and inspection applications
+- Research and prototyping involving laser profilers
+- Integration with custom frontend interfaces
+
+---
+
+## Author
+Muhammad Hasan Khan
