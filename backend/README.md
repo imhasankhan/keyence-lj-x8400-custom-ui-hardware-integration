@@ -59,8 +59,10 @@ pip install -r requirements.txt
 ```
 ### 2. Run the development server
 
+```bash
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 The server will be available at http://localhost:8000
+```
 ---
 
 ## Interactive API documentation
