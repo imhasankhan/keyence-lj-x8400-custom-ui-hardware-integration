@@ -69,6 +69,25 @@ April 2025 – August 2025
 
 ---
 
+## Screenshots
+
+### Live 2D Profile Visualization
+![Live 2D Profile](docs/screenshots/live-profile.png)
+
+### 2D Data Capture & Analysis
+![2D Capture](docs/screenshots/2d-capture.jpg)
+
+### 3D Surface Reconstruction
+![3D Reconstruction](docs/screenshots/3d-reconstruction.jpg)
+
+### Dataset Comparison
+![Compare Data](docs/screenshots/compare-data.png)
+
+### Help & Guidance Interface
+![Help](docs/screenshots/Help.jpg)
+
+---
+
 ## User Interface Structure
 - Live Data Page: real-time profile capture and visualization
 - 3D Data Page: surface reconstruction and slice inspection
