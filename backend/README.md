@@ -65,7 +65,13 @@ Edit
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 The server will be available at http://localhost:8000
 
-## Interactive API documentation:
+```markdown
+---
+
+## Interactive API documentation
+
+FastAPI automatically provides interactive API documentation (Swagger UI)
+for exploring and testing all available endpoints.
 
 ```bash
 http://localhost:8000/docs
