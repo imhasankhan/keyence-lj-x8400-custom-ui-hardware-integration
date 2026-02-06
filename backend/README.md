@@ -45,26 +45,22 @@ These endpoints are designed to be consumed by a browser-based frontend
 
 ## Running the Backend (Development)
 
-### Environment Setup
+### 1. Install dependencies
 
-Create and activate a virtual environment:
+Navigate to the `BackEnd` directory and set up your environment:
 
 ```bash
+cd BackEnd
 python -m venv venv
-# Windows
-venv\Scripts\activate
-# Linux / macOS
-source venv/bin/activate
+venv\Scripts\activate          # On Windows
+# source venv/bin/activate     # On Linux/macOS
 
 pip install -r requirements.txt
-
+```
 ### 2. Run the development server
-bash
-Copy
-Edit
+
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 The server will be available at http://localhost:8000
-
 ---
 
 ## Interactive API documentation
@@ -74,7 +70,7 @@ for exploring and testing all available endpoints.
 
 ```bash
 http://localhost:8000/docs
-
+```
 ---
 
 ## Source Code Note
