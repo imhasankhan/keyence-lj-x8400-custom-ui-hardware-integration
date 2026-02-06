@@ -1,1 +1,38 @@
+"""
+Example: Image / profile acquisition
+
+This script demonstrates how a client could retrieve
+2D profile data from the backend logic and process it
+locally for analysis or visualization.
+"""
+
+import numpy as np
+from app.sensor_logic import (
+    connect_sensor,
+    get_profile,
+    disconnect_sensor
+)
+
+def main():
+    print("Connecting to sensor...")
+    connect_sensor()
+
+    print("Requesting profile data...")
+    profile = get_profile()
+
+    if "error" in profile:
+        print("Error:", profile["error"])
+        return
+
+    x = np.array(profile["x"])
+    z = np.array(profile["z"])
+
+    print(f"Received profile with {len(x)} points")
+    print(f"Z range: min={z.min():.2f}, max={z.max():.2f}")
+
+    print("Disconnecting sensor...")
+    disconnect_sensor()
+
+if __name__ == "__main__":
+    main()
 
