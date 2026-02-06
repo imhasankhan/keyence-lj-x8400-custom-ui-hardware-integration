@@ -18,6 +18,8 @@ integration.
 > ⚠️ Due to vendor licensing and academic restrictions, the Keyence SDK and
 full source code are not publicly included. This repository serves as a
 technical portfolio and system documentation.
+Mock mode is planned to allow running the system without physical hardware.
+Currently, the frontend and backend architecture reflect the real system, but live streaming requires the Keyence SDK.
 
 ---
 
