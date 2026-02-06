@@ -149,5 +149,12 @@ Hochschule Darmstadt – Electrical Engineering & Information Technology (M.Sc.)
 
 ---
 
+## Running the Project (Quick Start)
+
+- Frontend: see `frontend/README.md`
+- Backend: see `backend/README.md`
+
+---
+
 ## Author
 Muhammad Hasan Khan
