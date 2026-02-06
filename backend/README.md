@@ -1,43 +1,66 @@
-# Backend – FastAPI Sensor Interface
+# FastAPI Backend for Keyence LJ-X8400 Laser Profiler
 
-This backend provides a REST-based and real-time interface between the
-Keyence LJ-X8400 laser profiler and the browser-based frontend.
+This repository contains a FastAPI-based backend designed to interface with
+the Keyence LJ-X8400 laser profiler. The backend acts as a middleware layer
+between the physical sensor hardware and a frontend application, providing
+clean and structured APIs for sensor control and profile data acquisition.
 
-It acts as a controlled middleware layer that:
-- Manages the sensor connection
-- Retrieves profile data
-- Exposes clean APIs to the frontend
-- Hides vendor-specific SDK complexity
+The backend was developed as part of an industrial sensor visualization
+project and is structured to be modular, testable, and frontend-agnostic.
+
+---
+
+## Backend Responsibilities
+- Manage connection state with the laser profiler
+- Configure sensor communication parameters
+- Retrieve and preprocess 2D profile data
+- Expose REST endpoints for frontend consumption
+- Abstract vendor-specific SDK complexity
 
 ---
 
 ## Technology Stack
-- Python
+- Python 3
 - FastAPI
-- Async REST API
-- Vendor SDK wrapper (excluded due to licensing)
+- Uvicorn (ASGI server)
+- NumPy
+- Vendor SDK wrapper (excluded from repository)
 
 ---
 
-## Responsibilities
-- Connect / disconnect to the laser sensor
-- Maintain connection state
-- Retrieve latest 2D profile data
-- Serve data to frontend via HTTP / WebSocket
-- Normalize and preprocess raw sensor data
+## API Overview
+
+| Method | Endpoint       | Description                              |
+|--------|----------------|------------------------------------------|
+| POST   | `/set_sensor`  | Store sensor IP and communication port   |
+| POST   | `/connect`     | Establish connection to the sensor       |
+| POST   | `/disconnect`  | Close sensor connection                  |
+| GET    | `/status`      | Get current connection status            |
+| GET    | `/profile`     | Retrieve latest 2D profile data          |
+
+These endpoints are designed to be consumed by a browser-based frontend
+(e.g. React) or any other client application.
 
 ---
 
-## API Endpoints (High-Level)
-- `POST /set_sensor` – Configure sensor IP and port
-- `POST /connect` – Establish connection to sensor
-- `POST /disconnect` – Close connection
-- `GET /status` – Connection status
-- `GET /profile` – Latest 2D profile data
+## Running the Backend (Development)
 
----
+### Environment Setup
 
-## Note on SDK
-Vendor SDK binaries and headers are intentionally excluded due to
-licensing restrictions. The backend structure and logic demonstrate
-how the SDK is integrated via a Python wrapper.
+Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Linux / macOS
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+### 2. Run the development server
+bash
+Copy
+Edit
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
+The server will be available at http://localhost:8000
