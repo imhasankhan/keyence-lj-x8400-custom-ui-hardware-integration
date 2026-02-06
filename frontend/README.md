@@ -60,14 +60,15 @@ http://localhost:3000
 ### Backend Integration
 
 This frontend is designed to work with the FastAPI backend located in:
-
+```bash
 /backend
+```
 
 The backend handles:
 
-Sensor communication
-Profile acquisition
-Data preprocessing
+- Sensor communication
+- Profile acquisition
+- Data preprocessing
 
 ### Project Context
 
